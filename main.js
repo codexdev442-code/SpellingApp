@@ -1,4 +1,4 @@
-let startTimer = 60;
+let startTimer = 80;
 let currentScore = 0;
 let highScore = 0;
 let clicked = true;
@@ -52,7 +52,7 @@ startBtn.addEventListener("click", () =>{
         // Save to localStorage
         localStorage.setItem("highScore", highScore);
        }
-        startTimer = 60;
+        startTimer = 80;
         timer.textContent = startTimer;
         startBtn.textContent = "Start";
         startBtn.style.background = "#3b82f6";
@@ -66,8 +66,9 @@ startBtn.addEventListener("click", () =>{
     startBtn.style.background = "#3b82f6";
     clicked = true;
     clearInterval(interval);
-    startTimer = 60;
+    startTimer = 80;
     timer.textContent = startTimer;
+    score.textContent = 0;
   };
 });
 
@@ -86,7 +87,7 @@ function check(){
     feedback.style.color = "red";
   }
 
-// clear the input
+// clear the inputu
 answerInput.value = "";
 }
 function speak(word){
@@ -99,8 +100,6 @@ function repeat(){
 function correction(){
    alert(fetchedWords)
 }
-// Save highScore
-localStorage.setItem("highScore", highScore);
 
 // Load highScore from localStorage (convert to number)
 highScore = Number(localStorage.getItem("highScore")) || 0;
