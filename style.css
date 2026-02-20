@@ -1,0 +1,135 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* Body Styling */
+body {
+  background: linear-gradient(135deg, #1e293b, #0f172a);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #fff;
+}
+
+/* Game Container */
+.game_container {
+  background: #1e293b;
+  width: 90vw;
+  max-width: 500px;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Top Info Section */
+.basic_info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.basic_info span {
+  font-weight: bold;
+  color: #38bdf8;
+}
+
+/* Feedback + Input Section */
+.feedback_input {
+  margin-bottom: 20px;
+}
+
+.feedback_input h4 {
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.feedback_input span {
+  font-weight: bold;
+  color: #22c55e; /* green for correct */
+}
+
+/* Input Field */
+.input {
+  display: flex;
+  align-items: center;
+  background: #0f172a;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #334155;
+}
+
+.input input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 16px;
+}
+
+.input p {
+  cursor: pointer;
+  font-size: 18px;
+  transition: transform 0.2s ease;
+}
+
+.input p:hover {
+  transform: scale(1.2);
+}
+
+/* Buttons */
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.buttons button {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Check Button */
+.buttons button:first-child {
+  background: #22c55e;
+  color: white;
+}
+
+.buttons button:first-child:hover {
+  background: #16a34a;
+}
+
+/* Start Button */
+#start {
+  background: #3b82f6;
+  color: white;
+}
+
+#start:hover {
+  background: #2563eb;
+}
+/* Correction */
+.correct{
+  width: 98%;
+  background: #334155;
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  border-radius: 0.4rem;
+}
+.correct p{
+  font-size: 1.3rem;
+}
