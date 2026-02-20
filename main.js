@@ -69,6 +69,7 @@ startBtn.addEventListener("click", () =>{
     startTimer = 80;
     timer.textContent = startTimer;
     score.textContent = 0;
+    currentScore = 0;
   };
 });
 
