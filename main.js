@@ -46,9 +46,12 @@ startBtn.addEventListener("click", () =>{
         clearInterval(interval);
         checked.disabled = true;
         if (currentScore > highScore) {
-          highScore = currentScore;
-          highScoreDisplay.textContent = highScore;
-        }
+            highScore = currentScore;
+            highScoreDisplay.textContent = highScore;
+  
+        // Save to localStorage
+        localStorage.setItem("highScore", highScore);
+       }
         startTimer = 60;
         timer.textContent = startTimer;
         startBtn.textContent = "Start";
@@ -99,6 +102,6 @@ function correction(){
 // Save highScore
 localStorage.setItem("highScore", highScore);
 
-// Load highScore on page load
-highScore = localStorage.getItem("highScore") || 0;
+// Load highScore from localStorage (convert to number)
+highScore = Number(localStorage.getItem("highScore")) || 0;
 highScoreDisplay.textContent = highScore;
