@@ -39,6 +39,8 @@ startBtn.addEventListener("click", () =>{
     fetchWord();
     startBtn.textContent = "Stop";
     startBtn.style.background = "red";
+    score.textContent = 0;
+     currentScore = 0;
     clicked = false;
     interval = setInterval( () =>{
       startTimer -= 1;
@@ -56,7 +58,7 @@ startBtn.addEventListener("click", () =>{
         timer.textContent = startTimer;
         startBtn.textContent = "Start";
         startBtn.style.background = "#3b82f6";
-        score.textContent = 0;
+        currentScore = 0;
         clicked = true;
       }
       timer.textContent = startTimer;
